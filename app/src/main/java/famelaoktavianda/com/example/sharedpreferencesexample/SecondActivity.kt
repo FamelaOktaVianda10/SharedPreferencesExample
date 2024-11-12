@@ -6,14 +6,11 @@ import android.os.Bundle
 import famelaoktavianda.com.example.sharedpreferencesexample.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivitySecondBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.btnLoad.setOnClickListener {
             val filename = "$packageName-${MainActivity.RPL}"
             val pref = getSharedPreferences(filename,
@@ -23,14 +20,8 @@ class SecondActivity : AppCompatActivity() {
             binding.tvOutput.text = "$firstName $lastName "
         }
     }
-
     override fun onResume() {
         super.onResume()
-        binding.tvOutput.text = "RPL-POLBENG"
-    }
-    class MainActivity : AppCompatActivity() {
-        companion object {
-            const val RPL = ""
-        }
+        binding.tvOutput.text = "Click Button Load Data"
     }
 }

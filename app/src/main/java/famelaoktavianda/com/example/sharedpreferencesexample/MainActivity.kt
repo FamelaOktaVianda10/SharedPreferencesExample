@@ -50,4 +50,7 @@ class MainActivity : AppCompatActivity() {
         binding.etLastName.setText("")
         binding.tvOutput.text = ""
     }
+    companion object {
+        const val RPL = "TESTTFILE"
+    }
 }
